@@ -1,0 +1,35 @@
+{
+    "name": "cordova-wifi-info",
+    "description": "Cordova Wifi Info",
+    "version": "1.0.0",
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    },
+    "cordova": {
+        "id": "cordova-wifi-info",
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "ecosystem:phonegap"
+    ],
+    "engines":{
+        "cordova" : ">=3.0.0"
+    },
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "test": "jasmine-node --color spec"
+    },
+    "devDependencies": {
+        "jasmine-node": "1.14.5"
+    }
+}
