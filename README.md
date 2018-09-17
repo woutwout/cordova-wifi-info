@@ -2,7 +2,7 @@
 cordova-wifi-info
 ------------------------
 
-Simply function that allows you to get the SSID information from a the connected device.
+Simple function for iOS only that allows you to get the SSID information from a the connected device.
 
 `cordova plugin add https://github.com/gregavola/cordova-wifi-info`
 

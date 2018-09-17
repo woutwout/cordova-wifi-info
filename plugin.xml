@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
            id="cordova-wifi-info"
-      version="1.0.0">
+      version="1.0.1">
     <name>cordova-wifi-info</name>
     <description>Cordova Wifi Info</description>
     <license>Apache 2.0</license>
@@ -12,16 +12,6 @@
     <js-module src="www/wifiinfo.js" name="WifiInfo">
         <clobbers target="WifiInfo" />
     </js-module>
-
-     <!-- Android -->
-    <platform name="android">
-        <config-file target="config.xml" parent="/*">
-            <feature name="WifiInfo">
-                <param name="android-package" value="com.wifiinfo.cordova.WifiInfoPlugin" />
-                <param name="onload" value="true" />
-            </feature>
-        </config-file>
-    </platform>
 
     <platform name="ios">
          <config-file target="config.xml" parent="/*">

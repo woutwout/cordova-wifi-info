@@ -1,7 +1,7 @@
 {
     "name": "cordova-wifi-info",
     "description": "Cordova Wifi Info",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "",
     "repository": {
         "type": "git",
@@ -13,8 +13,7 @@
     "cordova": {
         "id": "cordova-wifi-info",
         "platforms": [
-            "ios",
-            "android"
+            "ios"
         ]
     },
     "keywords": [
