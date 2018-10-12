@@ -18,6 +18,15 @@ WifiInfo.getConnectedSSID(
 );
 ```
 
+The response of the plugin shuold be:
+
+```
+{
+    "ssid": "SSID HERE",
+    "bssid": "BSSID HERE",
+}
+```
+
 Note: This will not work on a simulator - it will throw an error, but will actual allow to build. This doesn't add HotSpotConfiguration entitlements, just a simple way to get the Network Status Info from Wifi.
 
 You could use Ionic `platform` like so and the [Network Infromation plugin](https://ionicframework.com/docs/native/network/) to get this information:
