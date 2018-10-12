@@ -30,15 +30,18 @@
 - (void)getConnectedSSID:(CDVInvokedUrlCommand*)command {
     CDVPluginResult *pluginResult = nil;
     NSDictionary *r = [self fetchSSIDInfo];
-
-    NSString *ssid = [r objectForKey:(id)kCNNetworkInfoKeySSID]; //@"SSID"
-
-    if (ssid && [ssid length]) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:ssid];
+    
+    if (r && [r count]) {
+        NSString *ssid = [r objectForKey:(id)kCNNetworkInfoKeySSID]; //@"SSID"
+        NSString *bssid = [r objectForKey:(id)kCNNetworkInfoKeyBSSID]; //@"BSSID"
+        
+        NSDictionary *dict = @{ @"ssid" : ssid, @"bssid" : bssid};
+        
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dict];
     } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Not available"];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Not Available"];
     }
-
+    
     [self.commandDelegate sendPluginResult:pluginResult
                                 callbackId:command.callbackId];
 }
