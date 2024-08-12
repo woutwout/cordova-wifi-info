@@ -15,7 +15,7 @@
 
     <platform name="ios">
          <config-file target="config.xml" parent="/*">
-             <feature name="WifiInfo">
+             <feature name="WifiInfoIOS">
                  <param name="ios-package" value="WifiInfoPlugin" />
              </feature>
          </config-file>
