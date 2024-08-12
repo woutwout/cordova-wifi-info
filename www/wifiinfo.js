@@ -6,8 +6,8 @@ var exec = cordova.require('cordova/exec'),
 
 var WifiInfo = {
     getConnectedSSID: function(successCallback, errorCallback, options) {
-        exec(successCallback, errorCallback, 'WifiInfo', 'getConnectedSSID', [options]);
+        exec(successCallback, errorCallback, 'WifiInfoIOS', 'getConnectedSSID', [options]);
     }
 };
 
-module.exports = WifiInfo;
+module.exports = WifiInfoIOS;
